@@ -3,9 +3,74 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #F3F3F3;
+    background: linear-gradient(#E9F6FF, #B6E0FF);
 }
 *, *::before, *::after {
     box-sizing: border-box;
     overflow: auto;
+}
+
+/* /////////// */
+
+.city-search{
+    height: 25%;
+    background-color: aquamarine;
+    padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    height: 3.5vh;
+    padding: 0 1vh;
+    margin: 1vh;
+    border: none;
+    border-radius: 0.8vh;
+    font-size: 20px;
+    color: black;
+    filter: drop-shadow(0.2vh 0.3vh 0.55vh #d4dde4);
+}
+
+
+button{
+    height: 3.5vh;
+    padding: 0 1vh;
+    background-color: #83C4F0;
+    border: none;
+    border-radius: 0.8vh;
+}
+
+/* #cityResult{
+    color: crimson;
+} */
+
+
+/* /////////// */
+.temperature{
+    height: 55%;
+    background-color: blueviolet;
+    
+}
+
+
+
+/* /////////// */
+
+.sentence{
+    height: 20%;
+    background-color:crimson;
+    padding: 0 5vh 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #39444D;
+    font-family: 'Roboto', sans-serif;;
+
+}
+
+h1{
+    font-size: 26px;
+}
+h3{
+    font-size: 14px;
 }

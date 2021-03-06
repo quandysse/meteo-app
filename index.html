@@ -6,14 +6,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="script.js" defer></script>
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
         <title>Meteo App</title>
     </head>
     <body>
-        <h1 id="city">xxx</h1>
-        <h1 id="title">xxx</h1>
-        <form id="form" action="">
-            <input id="price" placeholder="Devinez le price ! (entre 0 et 1 000)" />
-            <button type="submit" id="btn">Deviner</button>
-       </form>
+        <div class="top">
+            <form id="form" action="">
+                <input id="city" placeholder="Ville" />
+                <button type="submit" id="btn">Se</button>
+           </form>
+        <div id="cityResult"> </div>
+        <div id="temp"> </div>
+
+
+        </div>
+        <div class="hours">
+
+        </div>
+        <div class="sentence">
+            <h1>What the weather like today ?</h1>
+            <h3>Look for the city whose temperature you want.</h3>
+            
+        </div>
     </body>
 </html>

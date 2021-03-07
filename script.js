@@ -12,14 +12,38 @@
 const form = document.getElementById('form');
 const city = document.getElementById('city');
 
+const textAnim = document.querySelector('h3');
+new Typewriter(textAnim, {
+    deleteSpeed: 30
+})
+.changeDelay(30)
+.typeString('Look for the city whose temperature you want.') // pour taper du text
+.start() // pour commencer l'anim
+
+
+// ANim au click//
+window.addEventListener('click', (e) => {
+    const rond = document.createElement('div');
+    rond.className = 'clickAnim';
+    rond.style.top = `${e.pageY - 10}px`;
+    rond.style.left = `${e.pageX - 10}px`;
+    document.body.appendChild(rond);
+
+    setTimeout(() => {
+        rond.remove();
+    }, 1500)
+})
+
+let element = document.getElementById('hide')
+let btn = document.getElementById('btn')
+
+
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     console.log(e);
     // cle moi
     const url = 'https://api.openweathermap.org/data/2.5/weather?q=' + city.value + '&appid=3865df021f9d2983383dd2af4fc0bdb9&units=metric';
-
-    // cle emeric
-    // const url = 'https://api.openweathermap.org/data/2.5/weather?q=' + city.value + '&appid=ff349be070b028d291296e97b0cc432c&units=metric';
 
     let requestWeather = new XMLHttpRequest();
     
@@ -32,14 +56,18 @@ form.addEventListener('submit', (e) => {
             if (requestWeather.status === 200){ 
                 let responseWeatherStocked = requestWeather.response;
                 console.log(responseWeatherStocked);
-                let temperature = responseWeatherStocked.main.temp;                
-                // document.getElementById('title').textContent = temperature;
-                // document.getElementById('city').textContent = city.value + ' : ' + temperature + '°';
-                document.getElementById('temp').textContent = city.value + ' : ' + temperature + '°';
-                // console.log(document.getElementById('temp'))
+                let temperature = responseWeatherStocked.main.temp; 
+                let country = responseWeatherStocked.sys.country;
+                let weather = responseWeatherStocked.weather[0].main
+
+
+                document.getElementById('cityResult').textContent = city.value ; 
+                document.getElementById('temp').textContent = temperature;
+                document.getElementById('country').textContent = country;
+
 
             } else {
-                alert("Ville non valide");
+                city.classList.add("error")
             }
         } 
     }

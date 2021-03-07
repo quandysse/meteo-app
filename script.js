@@ -62,7 +62,7 @@ form.addEventListener('submit', (e) => {
 
 
                 document.getElementById('cityResult').textContent = city.value ; 
-                document.getElementById('temp').textContent = temperature;
+                document.getElementById('temp').textContent = temperature + "°";
                 document.getElementById('country').textContent = country;
 
 

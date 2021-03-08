@@ -10,30 +10,34 @@
         <title>Meteo App</title>
     </head>
     <body>
-        
-        <div class="hide">
-            <div class="city-search">
-                <form id="form" action="">
-                    <input id="city" placeholder="City" />
-                    <button type="submit" id="btn">Search</button>
-                </form>
-            </div>
-            
-            <div class="temperature">
-                <div class="results-box">
-                    <div class="cityResult" id="cityResult"> </div>
-                    <div class="country" id="country"> </div>
-                    <div class="temp" id="temp"> </div>
+        <!-- <div class="white-filter" id="white-filter"> -->
+
+            <div class="img" id="img">
+                <div class="hide">
+                    <div class="city-search">
+                        <form id="form" action="">
+                            <input id="city" placeholder="City" />
+                            <button type="submit" id="btn" class="btn">Search</button>
+                        </form>
+                    </div>
+                    
+                    <div class="temperature">
+                        <div class="results-box">
+                            <div class="cityResult" id="cityResult"> </div>
+                            <div class="country" id="country"> </div>
+                            <div class="temp" id="temp"> </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <script src= "https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+                <div class="sentence">
+                    <h1>What's the weather like today ?</h1>
+                    <h3>Look for the city whose temperature you want.</h3>
+                    
                 </div>
             </div>
-        </div>
-        
-        <script src= "https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-        <div class="sentence">
-            <h1>What's the weather like today ?</h1>
-            <h3>Look for the city whose temperature you want.</h3>
-            
-        </div>
+        <!-- </div> -->
         
     </body>
 </html>

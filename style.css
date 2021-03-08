@@ -4,11 +4,26 @@ body, html {
     margin: 0;
     padding: 0;
     background: linear-gradient(#E9F6FF, #B6E0FF);
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
 }
 *, *::before, *::after {
     box-sizing: border-box;
     overflow: auto;
+}
+
+
+/* .white-filter{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+} */
+.img{
+    background-image: url(../jp-valery-d6zhrLt-Ao8-unsplash.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* z-index: 9000; */
 }
 
 
@@ -28,30 +43,39 @@ input{
     border-radius: 0.8vh;
     font-size: 20px;
     color: #39444D;
-    filter: drop-shadow(0.2vh 0.3vh 0.55vh #d4dde4);
+    /* filter: drop-shadow(0.2vh 0.3vh 0.55vh #d4dde4); */
 }
 button{
     height: 3.5vh;
     padding: 0 1vh;
-    background-color: #E9F6FF;
+    background-color:transparent;
     border: 1.5px rgb(51, 51, 51) solid;
+
     border-radius: 0.8vh;
 }
 button:hover{
     background-color: #39444D;
     color: white;
 }
+.btn{
+    color: #272727;
+}
 
 
 /* /////////// */
 .temperature{
     height: 55%;
+    /* background-color: aqua; */
     display: flex;
     align-items: center;
     flex-direction: column;
-    color: #39444D;
+    color: white;
+    text-shadow: black 1px 0 10px;
+
 
 }
+
+
 
 .results-box{
     height: 75%;
@@ -67,7 +91,9 @@ button:hover{
 }
 .country{
     font-size: 20px;
-    color: #39444D;
+    /* color: #39444D; */
+    color: white;
+    text-shadow: black 1px 0 10px;
     margin-bottom: 15vh;
 }
 .temp{
@@ -79,6 +105,9 @@ button:hover{
 /* /////////// */
 .sentence{
     height: 20%;
+    width: 100%;
+    /* background-color: tomato; */
+    /* margin-left: 7vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,6 +137,8 @@ h3{
     animation: clickAnim 0.5s ease-in-out;
 }
 /* //// */
+
+
 
 .error {    
     animation: shake 0.1s ease-in-out 0.1s 5 alternate;
@@ -147,7 +178,16 @@ h3{
         font-size: 16px;
     }
     .sentence{
-        padding: 0 3vh 0 3vh;
+        padding: 3vh 3vh 0 3vh;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    h1{
+        color: white;
+    }
+    h3{
+        color: white;
     }
 }
 
@@ -157,8 +197,27 @@ h3{
     }
 }
 
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 290px) {
     input{
         width: 10vh;
+    }
+    .results-box{
+        width: 90%;
+        /* background-color: tomato; */
+    }
+    .sentence{
+        height: 40%;
+        width: 90%;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #39444D;
+    }
+    h1{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 20px;
     }
 }

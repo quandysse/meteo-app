@@ -25,6 +25,8 @@ new Typewriter(textAnim, {
 window.addEventListener('click', (e) => {
     const rond = document.createElement('div');
     rond.className = 'clickAnim';
+    
+    // rond.className = 'colorchange';
     rond.style.top = `${e.pageY - 10}px`;
     rond.style.left = `${e.pageX - 10}px`;
     document.body.appendChild(rond);
@@ -34,8 +36,24 @@ window.addEventListener('click', (e) => {
     }, 1500)
 })
 
-let element = document.getElementById('hide')
-let btn = document.getElementById('btn')
+
+
+// /////////// jsuis dégoutée j'arrive pas à recadrer l'image dans le css///////////
+// window.onload=function(){
+ 
+//     var randomImage = new Array();  
+
+//     randomImage[0] = "https://images.unsplash.com/photo-1505075625100-1a9150eacf21?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3450&q=80";  
+//     randomImage[1] = "https://images.unsplash.com/photo-1445217143695-467124038776?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2866&q=80";  
+//     randomImage[2] = "https://images.unsplash.com/photo-1490604001847-b712b0c2f967?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3480&q=80";  
+//     randomImage[3] = "https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80";  
+//     randomImage[4] = "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2550&q=80";  
+//     randomImage[5] = "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2550&q=80";  
+    
+//     var number = Math.floor(Math.random()*randomImage.length); 
+//     return document.getElementById("img").innerHTML = '<img src="'+randomImage[number]+'" />'; 
+// ////////////////////////////////////////////////////////////////////////
+    
 
 
 
@@ -64,8 +82,11 @@ form.addEventListener('submit', (e) => {
                 document.getElementById('cityResult').textContent = city.value ; 
                 document.getElementById('temp').textContent = temperature + "°";
                 document.getElementById('country').textContent = country;
-
-
+                document.querySelector("h1").style.color = "white";
+                document.querySelector("h3").style.color = "white";
+                            
+                
+                
             } else {
                 city.classList.add("error")
             }
